@@ -38,7 +38,7 @@ html *{
     scrollbar-width: none;
 }
 
-html {font-size: 100%;} /*16px*/
+html {font-size: 150%;} /*16px*/
 
 body {
   margin: 0;
@@ -355,6 +355,16 @@ footer a {
 }
 
 @media (max-width: 1000px) {
+    html {font-size: 175%;} /*16px*/
+
+    header h1 {
+        width: 100%;
+        /*font-size: 4.3rem;*/
+    }
+
+    header nav {
+        display: none;
+    }
     .instagram #pixlee_container {
         width: 100%;
     }
