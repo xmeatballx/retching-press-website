@@ -8,11 +8,11 @@
 
 .btn-primary {
     font-weight: 900;
-    padding: 1em 2em;
+    padding: .5em .5em;
 
     color: var(--text-color);
     text-decoration: none;
-    
+
     border: 3px solid var(--text-color);
     border-radius: 15px;
 }
@@ -32,49 +32,69 @@
     display: none;
 }
 
-html *{
+html * {
     box-sizing: border-box;
-    -ms-overflow-style: none;  /* IE and Edge */
+    -ms-overflow-style: none;
+    /* IE and Edge */
     scrollbar-width: none;
 }
 
-html {font-size: 150%;} /*16px*/
+/*16px*/
 
 body {
-  margin: 0;
-  background: white;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  line-height: 1.75;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+    margin: 0;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    /* width: 100vw; */
 }
 
-p {margin-bottom: 1rem;}
+p {
+    margin-bottom: 1rem;
+    font-size: 2.5vh;
+}
 
-h1, h2, h3, h4, h5 {
-  margin: 3rem 0 1.38rem;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  line-height: 1.3;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 3rem 0 1.38rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
 }
 
 h1 {
-  margin-top: 0;
-  padding-left: .5em;
-  font-size: 3.052rem;
-  font-weight: 800;
+    margin-top: 0;
+    padding-left: .5em;
+    font-size: 8vh;
+    font-weight: 800;
 }
 
-h2 {font-size: 2.441rem;}
+h2 {
+    font-size: 6vh;
+}
 
-h3 {font-size: 1.953rem;}
+h3 {
+    font-size: 1.953rem;
+}
 
-h4 {font-size: 1.563rem;}
+h4 {
+    font-size: 1.563rem;
+}
 
-h5 {font-size: 1.25rem;}
+h5 {
+    font-size: 1.25rem;
+}
 
-small, .text_small {font-size: 0.4rem;}
+small,
+.text_small {
+    font-size: 0.4rem;
+}
 
 header {
     display: flex;
@@ -121,31 +141,60 @@ nav a {
     padding-top: 10%;
 }
 
-.image1 {
+.imageWrapper {
     width: 30vw;
-    padding: 0 5% 0 2.5%;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    /* flex: 1; */
+}
+
+.image1 {
+    z-index: -1;
+    padding-left: 2.5vw;
+    transform: scale(1.5);
 }
 
 .hero .focus_content {
-    width: 62.5%;
+    width: 70vw;
+    height: max-content;
+    flex: 1 !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero .btn-primary {
+    /* position: absolute;
+    top: 50vh;
+    left: 66vw; */
+    width: fit-content;
+    text-align: center;
+    align-self: center;
 }
 
 .hero h2 {
-    padding-bottom: 3%;
+    margin: 5vw;
+    /* padding-left: 5vw; */
 }
 
-.hero .secondary_content{
-    width: 65%;
-    padding: 1% 0 0 5%;
-    margin-top: 0%;
+.hero .secondary_content {
+    width: 70vw;
+    padding: 10vh 0 0 5%;
+    margin-top: 2.5vh;
+    /* padding-left: 25vw; */
+    overflow: visible;
 }
 
-.hero .secondary_content p{
+.hero .secondary_content p {
     padding-bottom: 3%;
 }
 
 .hero .secondary_content a:hover {
     cursor: pointer;
+}
+
+.hero p {
+    font-size: 3vh;
 }
 
 .modal {
@@ -154,7 +203,7 @@ nav a {
     top: 0;
     left: 0;
     width: 100vw;
-    height:100vh;
+    height: 100vh;
     background-color: rgba(0, 0, 0, .6);
 }
 
@@ -167,6 +216,7 @@ nav a {
     background-color: #FFFDEB;
     border-radius: 20px;
 }
+
 .modalcontent p {
     width: 90%;
     margin: auto;
@@ -188,14 +238,19 @@ nav a {
     justify-items: center;
 }
 
-.modalcontent input, label {
+.modalcontent input,
+label {
     margin: .5em auto;
 }
 
 .image2 {
-    width: 30vw;
-    padding: 2.5vh 0 0 5%;
-    margin-top: 3%;
+    transform: scale(1.75);
+    align-self: flex-end;
+    z-index: -1;
+}
+
+.imageCenter {
+    margin-top: 20vh;
 }
 
 .instagram {
@@ -233,7 +288,8 @@ nav a {
 .about p {
     width: 85%;
     line-height: 2em;
-    margin:auto;
+    font-size: 2vh;
+    margin: auto;
     margin-bottom: 8%;
 }
 
@@ -284,7 +340,7 @@ nav a {
     border-radius: 20px;
     width: 550px;
 
-    padding:2.5%;
+    padding: 2.5%;
     margin: auto;
 
     display: flex;
@@ -298,21 +354,25 @@ nav a {
     padding: 0;
 }
 
-.contact input, textarea, select {
+.contact input,
+textarea,
+select {
     width: 30em;
 }
 
-.contact p, .submit {
+.contact p,
+.submit {
     width: fit-content;
     margin: 0.5em auto;
 }
 
-.contact  .btn-primary {
+.contact .btn-primary {
     width: fit-content;
     margin: auto;
 }
 
-.contact h3, .btn-primary:hover {
+.contact h3,
+.btn-primary:hover {
     cursor: pointer;
     color: #4e7cd8;
 }
@@ -320,6 +380,7 @@ nav a {
 .contact .btn-primary:hover {
     border: 3px solid #4e7cd8;
 }
+
 .visible {
     display: block;
 }
@@ -336,44 +397,126 @@ footer {
     align-items: center;
 }
 
-footer > {
+footer> {
     margin-left: 2em;
 }
 
-footer svg {
- fill: var(--text-color);
+footer .insta {
+    width: 32px;
+    height: 32px;
+    margin: 0;
 }
 
-footer a, svg {
+footer svg {
+    margin: 0;
+    fill: var(--text-color);
+}
+
+footer a,
+svg {
     /* width: min-content; */
     margin: 3em 1em 1em 1em;
 }
+
 footer a {
     text-decoration: none;
     color: var(--text-color);
     padding-top: .75em;
 }
 
-@media (max-width: 1000px) {
-    html {font-size: 175%;} /*16px*/
+@media (max-width: 800px) {
+    .hero .secondary_content {
+        margin: 15vw !important;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    /*16px*/
 
     header h1 {
         width: 100%;
-        /*font-size: 4.3rem;*/
+        font-size: 4vh;
     }
 
     header nav {
         display: none;
     }
+
     .instagram #pixlee_container {
         width: 100%;
     }
 
     .hero {
-        padding-top: 15%;
+        /* padding-top: 15%; */
+    }
+
+    .hero .focus_content {
+        /* padding-left: 10vw; */
+        /* flex: 1; */
+        /* width: auto; */
+    }
+
+    .hero h2 {
+        font-size: 3vh;
+        padding-bottom: 15vh;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .hero .btn-primary {
+        top: 35vh;
     }
 
     .hero .secondary_content {
-        padding-top: 5vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 !important;
+        margin: 5vw !important;
     }
+
+    .hero .image1 {
+        transform: translateX(-25px);
+    }
+
+    .hero .image2 {
+        transform: scale(1);
+    }
+
+    .hero .imageWrapper {
+        margin: 0;
+        /* width: 40vw; */
+    }
+
+    .imageCenter {
+        width: 100vw !important;
+        margin: 5vw !important;
+        justify-content: center;
+    }
+
+    .contact h3 {
+        font-size: 3vh;
+    }
+
+    .contact form {
+        width: 90vw;
+    }
+
+    .contact input,
+    select,
+    textarea {
+        width: 70vw;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .hero .image1 {
+        transform: translateX(-25vw);
+    }
+}
 }
