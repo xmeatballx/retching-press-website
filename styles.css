@@ -137,7 +137,7 @@ nav a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
     padding-top: 10%;
 }
 
@@ -157,10 +157,11 @@ nav a {
 
 .hero .focus_content {
     width: 70vw;
-    height: max-content;
     flex: 1 !important;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding: 0 2vw;
 }
 
 .hero .btn-primary {
@@ -173,14 +174,19 @@ nav a {
 }
 
 .hero h2 {
-    margin: 5vw;
+    margin: 0;
+    margin-bottom: 2vh;
+    text-align: center;
+    /* margin: 5vw; */
     /* padding-left: 5vw; */
 }
 
 .hero .secondary_content {
     width: 70vw;
-    padding: 10vh 0 0 5%;
+    padding: 5vw;
     margin-top: 2.5vh;
+    width: 100vw;
+    text-align: center;
     /* padding-left: 25vw; */
     overflow: visible;
 }
@@ -244,13 +250,10 @@ label {
 }
 
 .image2 {
-    transform: scale(1.75);
-    align-self: flex-end;
-    z-index: -1;
-}
-
-.imageCenter {
-    margin-top: 20vh;
+    /* transform: scale(1.75);
+    align-self: flex-end; */
+    /* z-index: -1; */
+    /* padding: 10vw; */
 }
 
 .instagram {
@@ -272,17 +275,21 @@ label {
 }
 
 .about {
-    margin: 15% 5%;
+    margin: 5vw;
+    width: 90vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     background-color: #FFE600;
     border-radius: 2%;
 }
 
 .about h2 {
-    width: 100vw;
+    width: 90vw;
     text-align: center;
+    margin-top: 3vh;
 }
 
 .about p {
@@ -291,13 +298,21 @@ label {
     font-size: 2vh;
     margin: auto;
     margin-bottom: 8%;
+    text-align: center;
 }
 
-.about .image3 {
-    width: 20%;
-    margin-left: 3%;
-    height: auto;
-    margin-bottom: 5%;
+.about .imageWrapper {
+    justify-content: center;
+    overflow: hidden;
+    height: 20vh;
+    margin-top: 3vh;
+    /* margin-left: 3%; */
+    /* transform: scale(.5); */
+    /* margin-bottom: 5%; */
+}
+
+.about .image2 {
+    /* transform: scale(.5); */
 }
 
 .contact {
@@ -424,11 +439,79 @@ footer a {
     padding-top: .75em;
 }
 
-@media (max-width: 800px) {
-    .hero .secondary_content {
-        margin: 15vw !important;
+@media (max-width: 400px) {
+    .hero .focus_content h2 {
+        font-size: 18px;
+        font-weight: 800;
     }
 }
+
+@media (max-width: 550px) {
+    .hero .focus_content h2 {
+        font-size: 3vh;
+        font-weight: 800;
+    }
+
+    .hero .focus_content {
+        width: 40vw;
+    }
+
+    .hero .imageWrapper {
+        width: 50vw;
+    }
+
+    .hero .focus_content a {
+        font-size: 16px;
+
+    }
+
+    .hero p {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .hero .secondary_content {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 !important;
+        margin: 5vw !important;
+    }
+
+    .hero .image1 {
+        transform: translateX(-125px) !important;
+    }
+
+    .hero .imageWrapper {
+        margin: 0;
+        /* width: 40vw; */
+    }
+
+    .imageCenter {
+        width: 100vw !important;
+        /* margin: 5vw !important; */
+        justify-content: center;
+    }
+}
+
+/* @media (max-width: 800px) and (min-width: 650px) {
+    .hero .imageWrapper {
+        width: 50vw;
+    }
+
+    .hero .focus_content {
+        width: 50vw;
+    }
+
+    .hero .focus_content h2 {
+        font-size: 5vh;
+    }
+
+    .hero .secondary_content {
+        width: 50%;
+    }
+} */
 
 @media (max-width: 1200px) {
 
@@ -447,55 +530,21 @@ footer a {
         width: 100%;
     }
 
-    .hero {
-        /* padding-top: 15%; */
-    }
-
-    .hero .focus_content {
-        /* padding-left: 10vw; */
-        /* flex: 1; */
-        /* width: auto; */
-    }
-
     .hero h2 {
-        font-size: 3vh;
-        padding-bottom: 15vh;
+        font-size: 4.5vh;
+        /* padding-bottom: 5vh; */
     }
 
     .hero p {
         font-size: 18px;
     }
 
-    .hero .btn-primary {
-        top: 35vh;
-    }
-
-    .hero .secondary_content {
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 !important;
-        margin: 5vw !important;
-    }
-
     .hero .image1 {
-        transform: translateX(-25px);
+        transform: translateX(-50px);
     }
 
     .hero .image2 {
         transform: scale(1);
-    }
-
-    .hero .imageWrapper {
-        margin: 0;
-        /* width: 40vw; */
-    }
-
-    .imageCenter {
-        width: 100vw !important;
-        margin: 5vw !important;
-        justify-content: center;
     }
 
     .contact h3 {
@@ -512,11 +561,4 @@ footer a {
         width: 70vw;
     }
 
-}
-
-@media (max-width: 500px) {
-    .hero .image1 {
-        transform: translateX(-25vw);
-    }
-}
 }
