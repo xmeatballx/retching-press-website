@@ -53,8 +53,12 @@ body {
 }
 
 p {
-    margin-bottom: 1rem;
-    font-size: 2.5vh;
+    margin: 10vh 4vh 1vh 4vh;
+    font-size: 4vh;
+}
+
+a {
+    font-size: 3vh;
 }
 
 h1,
@@ -76,7 +80,7 @@ h1 {
 }
 
 h2 {
-    font-size: 6vh;
+    font-size: 8vh;
 }
 
 h3 {
@@ -161,7 +165,7 @@ nav a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 2vw;
+    padding: 0 10vw 0 2vw;
 }
 
 .hero .btn-primary {
@@ -170,23 +174,24 @@ nav a {
     left: 66vw; */
     width: fit-content;
     text-align: center;
-    align-self: center;
+    /* align-self: center; */
 }
 
 .hero h2 {
     margin: 0;
-    margin-bottom: 2vh;
-    text-align: center;
+    margin-bottom: 4vh;
+    margin-top: 8vh;
+    /* text-align: center; */
     /* margin: 5vw; */
     /* padding-left: 5vw; */
 }
 
 .hero .secondary_content {
-    width: 70vw;
-    padding: 5vw;
+    padding: 10vh 10vw;
     margin-top: 2.5vh;
     width: 100vw;
     text-align: center;
+    justify-self: center;
     /* padding-left: 25vw; */
     overflow: visible;
 }
@@ -197,10 +202,6 @@ nav a {
 
 .hero .secondary_content a:hover {
     cursor: pointer;
-}
-
-.hero p {
-    font-size: 3vh;
 }
 
 .modal {
@@ -295,7 +296,7 @@ label {
 .about p {
     width: 85%;
     line-height: 2em;
-    font-size: 2vh;
+    /* font-size: 2vh; */
     margin: auto;
     margin-bottom: 8%;
     text-align: center;
@@ -410,6 +411,7 @@ footer {
 
     justify-content: center;
     align-items: center;
+    height: 20vh;
 }
 
 footer> {
@@ -417,26 +419,31 @@ footer> {
 }
 
 footer .insta {
-    width: 32px;
-    height: 32px;
+    width: min-content;
+    height: 25pt;
     margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
 }
 
 footer svg {
+    position: relative;
+    top: 0;
     margin: 0;
+    padding: 0;
     fill: var(--text-color);
 }
 
-footer a,
-svg {
-    /* width: min-content; */
-    margin: 3em 1em 1em 1em;
+footer .about_link {
+    height: 10vh;
 }
 
 footer a {
     text-decoration: none;
     color: var(--text-color);
     padding-top: .75em;
+    margin: 0 3vw;
 }
 
 @media (max-width: 400px) {
