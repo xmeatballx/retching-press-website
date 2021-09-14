@@ -53,7 +53,7 @@ body {
 }
 
 p {
-    margin: 10vh 4vh 1vh 4vh;
+    /* margin: 10vh 4vh 1vh 4vh; */
     font-size: 4vh;
 }
 
@@ -190,10 +190,16 @@ nav a {
     padding: 10vh 10vw;
     margin-top: 2.5vh;
     width: 100vw;
-    text-align: center;
     justify-self: center;
     /* padding-left: 25vw; */
     overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero a {
+    width: min-content;
 }
 
 .hero .secondary_content p {
@@ -299,7 +305,7 @@ label {
     /* font-size: 2vh; */
     margin: auto;
     margin-bottom: 8%;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .about .imageWrapper {
@@ -450,6 +456,7 @@ footer a {
     .hero .focus_content h2 {
         font-size: 18px;
         font-weight: 800;
+        padding-left: 24px;
     }
 }
 
@@ -467,13 +474,8 @@ footer a {
         width: 50vw;
     }
 
-    .hero .focus_content a {
-        font-size: 16px;
-
-    }
-
     .hero p {
-        text-align: center;
+        /* text-align: center; */
         font-size: 16px;
     }
 
@@ -543,7 +545,12 @@ footer a {
     }
 
     .hero p {
+        font-size: 2vh;
+    }
+
+    .hero a {
         font-size: 18px;
+
     }
 
     .hero .image1 {
@@ -552,6 +559,10 @@ footer a {
 
     .hero .image2 {
         transform: scale(1);
+    }
+
+    .about p {
+        font-size: 2vh;
     }
 
     .contact h3 {
